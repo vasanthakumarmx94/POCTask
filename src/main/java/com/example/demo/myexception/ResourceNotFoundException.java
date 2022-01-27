@@ -13,6 +13,7 @@ private static final long serialVersionUID = 1L;
 	
 	private String resourceName;
 	private String fieldName;
+	private String message;
 	private Object fieldValue;
 	
 	public ResourceNotFoundException(String resourceName, String fieldName, Object fieldValue) {
@@ -23,6 +24,11 @@ private static final long serialVersionUID = 1L;
 	}
 	
 	
+	public ResourceNotFoundException(String message) {
+		this.message=message;
+	}
+
+
 	public String getResourceName() {
 		return resourceName;
 	}
